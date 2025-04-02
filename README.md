@@ -16,14 +16,15 @@ By. Fernado Cabal  02 April 2025
 
     ```bash
     cd server
-    npm install
+    npm install express multer cors dotenv file-type
     ```
 
 3.  Install client dependencies:
 
     ```bash
     cd ../client
-    npm install
+    npx create-react-app .
+    npm install axios react-bootstrap bootstrap react-spinners
     ```
 
 4.  Create a `.env` file in the `server` directory and add:
@@ -48,7 +49,7 @@ By. Fernado Cabal  02 April 2025
     npm start
     ```
 
-3.  Open your browser at `http://localhost:3000`.
+3.  Open your browser at `http://localhost:3000`
 
 4.  Select a file using the file input and click "Upload".
 
@@ -59,14 +60,16 @@ By. Fernado Cabal  02 April 2025
 * File size is limited to 5MB to prevent large uploads.
 * `file-type` library is used for reliable file type detection.
 * The server only returns the filename and the file type, it does not store the files persistently.
+* File type validation is performed on the server-side to ensure only allowed file types (images, PDFs, and text files) are processed.
+* Multer error handling is implemented to provide informative error messages for file size limits and other upload issues.
 
-## Enhancements
+## Features
 
-* Improved file type detection using `file-type`.
-* Progress bar during file upload.
-* Enhanced UI/UX using React Bootstrap.
-* Error handling for upload failures.
-* File size limit of 5MB.
+* File upload with progress tracking.
+* File type detection and analysis.
+* Modern UI using React Bootstrap.
+* Error handling and validation.
+* File size limit (5MB).
 
 ## Roadmap
 
@@ -76,4 +79,3 @@ By. Fernado Cabal  02 April 2025
 * Deployment documentation.
 * Add more security features.
 * Convert to typescript.
-
