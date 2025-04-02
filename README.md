@@ -3,6 +3,8 @@
 This project is a bootstrap for a React and Node.js application that allows users to upload files and analyze their file types.
 By. Fernado Cabal  02 April 2025
 
+
+
 ## Installation
 
 1.  Clone the repository:
